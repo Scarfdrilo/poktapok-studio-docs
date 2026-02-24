@@ -1,0 +1,117 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Main Architecture" id="main-arch">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        
+        <!-- Title -->
+        <mxCell id="title" value="🍉 Poktapok Studio - Architecture" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=24;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="350" y="20" width="400" height="40" as="geometry"/>
+        </mxCell>
+        
+        <!-- Student/Browser -->
+        <mxCell id="student" value="👨‍💻 Estudiante&#xa;(Browser)" style="shape=actor;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="80" y="100" width="80" height="100" as="geometry"/>
+        </mxCell>
+        
+        <!-- Frontend Box -->
+        <mxCell id="frontend" value="Frontend&#xa;(Next.js + Tailwind)&#xa;&#xa;• Chat UI&#xa;• Preview iframe&#xa;• Deploy button&#xa;&#xa;frutero.club/bootcamp/studio" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;align=center;verticalAlign=top;spacingTop=5;" vertex="1" parent="1">
+          <mxGeometry x="220" y="80" width="180" height="140" as="geometry"/>
+        </mxCell>
+        
+        <!-- API Route -->
+        <mxCell id="api" value="API Route&#xa;/api/studio/session&#xa;&#xa;• Port assignment&#xa;• Request forwarding" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;align=center;verticalAlign=top;spacingTop=5;" vertex="1" parent="1">
+          <mxGeometry x="460" y="80" width="160" height="140" as="geometry"/>
+        </mxCell>
+        
+        <!-- OpenClaw Gateway -->
+        <mxCell id="gateway" value="OpenClaw Gateway&#xa;(ngrok tunnel)&#xa;&#xa;• Authentication&#xa;• Session routing&#xa;• Tool invocation" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;align=center;verticalAlign=top;spacingTop=5;" vertex="1" parent="1">
+          <mxGeometry x="680" y="80" width="160" height="140" as="geometry"/>
+        </mxCell>
+        
+        <!-- Subagent -->
+        <mxCell id="subagent" value="🤖 Subagent Session&#xa;(Claude)&#xa;&#xa;• Creates projects&#xa;• Runs bun/git&#xa;• Creates tunnels&#xa;• One per student" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;align=center;verticalAlign=top;spacingTop=5;" vertex="1" parent="1">
+          <mxGeometry x="900" y="80" width="160" height="140" as="geometry"/>
+        </mxCell>
+        
+        <!-- Arrows top row -->
+        <mxCell id="arrow1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;" edge="1" parent="1" source="student" target="frontend">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="arrow2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;" edge="1" parent="1" source="frontend" target="api">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="arrow3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;" edge="1" parent="1" source="api" target="gateway">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="arrow4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;" edge="1" parent="1" source="gateway" target="subagent">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        
+        <!-- Bottom row - outputs -->
+        <mxCell id="github" value="📁 GitHub&#xa;&#xa;Scarfdrilo/&#xa;&lt;proyecto&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;align=center;" vertex="1" parent="1">
+          <mxGeometry x="680" y="300" width="120" height="80" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="preview" value="🌐 Preview&#xa;&#xa;cloudflare&#xa;tunnel&#xa;:3000-3008" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;align=center;" vertex="1" parent="1">
+          <mxGeometry x="820" y="300" width="120" height="80" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="convex" value="🗄️ Convex DB&#xa;&#xa;projects&#xa;sessions&#xa;chat history" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="960" y="290" width="100" height="100" as="geometry"/>
+        </mxCell>
+        
+        <!-- Arrows to outputs -->
+        <mxCell id="arrow5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;dashed=1;" edge="1" parent="1" source="subagent" target="github">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="arrow6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;dashed=1;" edge="1" parent="1" source="subagent" target="preview">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="arrow7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;dashed=1;" edge="1" parent="1" source="subagent" target="convex">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        
+        <!-- Preview back to frontend -->
+        <mxCell id="arrow8" value="iframe" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;dashed=1;curved=1;" edge="1" parent="1" source="preview" target="frontend">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="880" y="420"/>
+              <mxPoint x="310" y="420"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Labels on arrows -->
+        <mxCell id="label1" value="HTTP" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="170" y="130" width="40" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="label2" value="POST" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="410" y="130" width="40" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="label3" value="/tools/invoke" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="620" y="130" width="70" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="label4" value="sessions_send" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="840" y="130" width="80" height="20" as="geometry"/>
+        </mxCell>
+        
+        <!-- Legend -->
+        <mxCell id="legend" value="Legend" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="80" y="280" width="140" height="104" as="geometry"/>
+        </mxCell>
+        <mxCell id="leg1" value="→ Request flow" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="legend">
+          <mxGeometry y="26" width="140" height="26" as="geometry"/>
+        </mxCell>
+        <mxCell id="leg2" value="⇢ Data/output" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="legend">
+          <mxGeometry y="52" width="140" height="26" as="geometry"/>
+        </mxCell>
+        <mxCell id="leg3" value="🤖 AI Agent" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="legend">
+          <mxGeometry y="78" width="140" height="26" as="geometry"/>
+        </mxCell>
+        
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,5 +1,14 @@
 # Poktapok Studio - VibeCoding Bootcamp Architecture
 
+## 📊 Diagramas
+
+Los diagramas están en formato `.drawio` (editable en [app.diagrams.net](https://app.diagrams.net)):
+
+- **[main-architecture.drawio](./diagrams/main-architecture.drawio)** - Arquitectura principal del sistema
+- **[user-flow.drawio](./diagrams/user-flow.drawio)** - Flujo completo del usuario
+
+> 💡 Para ver los diagramas: descarga el archivo y ábrelo en [app.diagrams.net](https://app.diagrams.net) o en la app de escritorio de draw.io
+
 ## Overview
 
 Poktapok Studio es una plataforma de "AI-powered vibe coding" donde estudiantes sin experiencia pueden crear proyectos web completos conversando con un agente de IA.
