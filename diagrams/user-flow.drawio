@@ -16,77 +16,77 @@
         </mxCell>
         
         <!-- Step 1 -->
-        <mxCell id="step1" value="1. Estudiante entra a&#xa;frutero.club/bootcamp/studio" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+        <mxCell id="step1" value="1. Student enters&#xa;frutero.club/bootcamp/studio" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
           <mxGeometry x="200" y="70" width="160" height="60" as="geometry"/>
         </mxCell>
         
         <!-- Step 2 -->
-        <mxCell id="step2" value="2. Se genera&#xa;visitorId único" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+        <mxCell id="step2" value="2. Unique visitorId&#xa;is generated" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
           <mxGeometry x="400" y="70" width="120" height="60" as="geometry"/>
         </mxCell>
         
         <!-- Step 3 -->
-        <mxCell id="step3" value="3. Escribe idea:&#xa;&quot;Quiero crear&#xa;una app de tareas&quot;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+        <mxCell id="step3" value="3. Writes idea:&#xa;&quot;I want to create&#xa;a tasks app&quot;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
           <mxGeometry x="560" y="70" width="140" height="60" as="geometry"/>
         </mxCell>
         
         <!-- Step 4 -->
-        <mxCell id="step4" value="4. Frontend envía&#xa;POST /api/studio/session&#xa;{action: &quot;send&quot;}" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+        <mxCell id="step4" value="4. Frontend sends&#xa;POST /api/studio/session&#xa;{action: &quot;send&quot;}" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
           <mxGeometry x="740" y="70" width="160" height="60" as="geometry"/>
         </mxCell>
         
         <!-- Step 5 -->
-        <mxCell id="step5" value="5. API asigna puerto&#xa;hash(visitorId) % 9&#xa;→ port 3005" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+        <mxCell id="step5" value="5. API assigns port&#xa;hash(visitorId) % 9&#xa;→ port 3005" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
           <mxGeometry x="80" y="180" width="140" height="60" as="geometry"/>
         </mxCell>
         
         <!-- Step 6 -->
-        <mxCell id="step6" value="6. API → Gateway&#xa;sessions_spawn/send&#xa;con label: studio-xxx" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+        <mxCell id="step6" value="6. API → Gateway&#xa;sessions_spawn/send&#xa;with label: studio-xxx" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
           <mxGeometry x="260" y="180" width="140" height="60" as="geometry"/>
         </mxCell>
         
         <!-- Step 7 -->
-        <mxCell id="step7" value="7. Subagent recibe&#xa;tarea con puerto&#xa;asignado" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+        <mxCell id="step7" value="7. Subagent receives&#xa;task with assigned&#xa;port" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
           <mxGeometry x="440" y="180" width="140" height="60" as="geometry"/>
         </mxCell>
         
         <!-- Step 8 -->
-        <mxCell id="step8" value="8. Subagent ejecuta:&#xa;• bunx create-next-app&#xa;• git init&#xa;• gh repo create" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+        <mxCell id="step8" value="8. Subagent executes:&#xa;• bunx create-next-app&#xa;• git init&#xa;• gh repo create" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
           <mxGeometry x="620" y="180" width="140" height="60" as="geometry"/>
         </mxCell>
         
         <!-- Step 9 -->
-        <mxCell id="step9" value="9. Subagent ejecuta:&#xa;• bun run dev :3005&#xa;• cloudflared tunnel" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+        <mxCell id="step9" value="9. Subagent executes:&#xa;• bun run dev :3005&#xa;• cloudflared tunnel" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
           <mxGeometry x="800" y="180" width="140" height="60" as="geometry"/>
         </mxCell>
         
         <!-- Step 10 -->
-        <mxCell id="step10" value="10. Subagent responde&#xa;con links:&#xa;📁 GitHub&#xa;🌐 Preview" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+        <mxCell id="step10" value="10. Subagent responds&#xa;with links:&#xa;📁 GitHub&#xa;🌐 Preview" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
           <mxGeometry x="80" y="290" width="140" height="70" as="geometry"/>
         </mxCell>
         
         <!-- Step 11 -->
-        <mxCell id="step11" value="11. Frontend muestra&#xa;preview en iframe" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+        <mxCell id="step11" value="11. Frontend shows&#xa;preview in iframe" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
           <mxGeometry x="260" y="290" width="140" height="70" as="geometry"/>
         </mxCell>
         
         <!-- Decision -->
-        <mxCell id="decision" value="12. ¿Cambios?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+        <mxCell id="decision" value="12. Changes?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
           <mxGeometry x="450" y="290" width="100" height="70" as="geometry"/>
         </mxCell>
         
         <!-- Loop back -->
-        <mxCell id="loopback" value="Pide cambios&#xa;al agente" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+        <mxCell id="loopback" value="Request changes&#xa;from agent" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
           <mxGeometry x="600" y="295" width="100" height="60" as="geometry"/>
         </mxCell>
         
         <!-- Deploy -->
-        <mxCell id="deploy" value="13. Click&#xa;&quot;Ver mi deploy&quot;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+        <mxCell id="deploy" value="13. Click&#xa;&quot;View my deploy&quot;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
           <mxGeometry x="450" y="400" width="100" height="60" as="geometry"/>
         </mxCell>
         
         <!-- Vercel -->
-        <mxCell id="vercel" value="14. Vercel import&#xa;desde GitHub" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+        <mxCell id="vercel" value="14. Vercel import&#xa;from GitHub" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
           <mxGeometry x="600" y="400" width="120" height="60" as="geometry"/>
         </mxCell>
         
@@ -144,7 +144,7 @@
         <mxCell id="a12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" edge="1" parent="1" source="step11" target="decision">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="a13" value="Sí" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" edge="1" parent="1" source="decision" target="loopback">
+        <mxCell id="a13" value="Yes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" edge="1" parent="1" source="decision" target="loopback">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
         <mxCell id="a14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;" edge="1" parent="1" source="loopback" target="step7">

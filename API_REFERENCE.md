@@ -11,7 +11,7 @@ GET  /api/studio/session?action=history&visitorId=xxx
 
 ### Start Session
 
-Inicia una nueva sesión de desarrollo.
+Starts a new development session.
 
 ```json
 {
@@ -31,13 +31,13 @@ Inicia una nueva sesión de desarrollo.
 
 ### Send Message
 
-Envía un mensaje al agente.
+Sends a message to the agent.
 
 ```json
 {
   "action": "send",
   "visitorId": "k977cdbtxm99ajdbcxg462g6t180zqh1",
-  "message": "Quiero crear una app de tareas"
+  "message": "I want to create a tasks app"
 }
 ```
 
@@ -45,9 +45,9 @@ Envía un mensaje al agente.
 ```json
 {
   "ok": true,
-  "reply": "¡Perfecto! Vamos a crear tu app de tareas...",
+  "reply": "Perfect! Let's create your tasks app...",
   "tunnelUrl": "https://xxx.trycloudflare.com",
-  "repoUrl": "https://github.com/Scarfdrilo/tareas-app"
+  "repoUrl": "https://github.com/Scarfdrilo/tasks-app"
 }
 ```
 
@@ -55,7 +55,7 @@ Envía un mensaje al agente.
 
 ### Get History
 
-Obtiene el historial de conversación.
+Gets conversation history.
 
 ```
 GET /api/studio/session?action=history&visitorId=xxx
@@ -68,11 +68,11 @@ GET /api/studio/session?action=history&visitorId=xxx
   "messages": [
     {
       "role": "user",
-      "content": "Quiero crear una app de tareas"
+      "content": "I want to create a tasks app"
     },
     {
       "role": "assistant", 
-      "content": "¡Perfecto! Vamos a crear tu app..."
+      "content": "Perfect! Let's create your app..."
     }
   ]
 }
@@ -80,7 +80,7 @@ GET /api/studio/session?action=history&visitorId=xxx
 
 ## OpenClaw Gateway Integration
 
-El API route se comunica con OpenClaw Gateway via `/tools/invoke`:
+The API route communicates with OpenClaw Gateway via `/tools/invoke`:
 
 ```typescript
 const response = await fetch(`${OPENCLAW_GATEWAY_URL}/tools/invoke`, {

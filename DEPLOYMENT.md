@@ -1,44 +1,44 @@
 # Deployment Guide - Poktapok Studio
 
-## Requisitos
+## Requirements
 
 ### AWS EC2 (Gateway Host)
-- OpenClaw instalado y configurado
-- GitHub CLI (`gh`) autenticado
+- OpenClaw installed and configured
+- GitHub CLI (`gh`) authenticated
 - Node.js + bun
-- cloudflared instalado
-- ngrok instalado
+- cloudflared installed
+- ngrok installed
 
 ### Vercel (Frontend)
-- Proyecto Next.js deployado
-- Variables de entorno configuradas
+- Next.js project deployed
+- Environment variables configured
 
 ## Setup
 
-### 1. Exponer Gateway con ngrok
+### 1. Expose Gateway with ngrok
 
 ```bash
-# En el servidor AWS
+# On AWS server
 screen -S ngrok
 ngrok http 18789
-# Ctrl+A, D para detach
+# Ctrl+A, D to detach
 ```
 
-Toma nota del URL generado: `https://xxx.ngrok-free.dev`
+Note the generated URL: `https://xxx.ngrok-free.dev`
 
-### 2. Configurar Variables en Vercel
+### 2. Configure Variables in Vercel
 
 ```
 OPENCLAW_GATEWAY_URL=https://xxx.ngrok-free.dev
-OPENCLAW_GATEWAY_TOKEN=<tu-token>
+OPENCLAW_GATEWAY_TOKEN=<your-token>
 ```
 
-Obtener token:
+Get token:
 ```bash
 cat ~/.openclaw/config.json | grep token
 ```
 
-### 3. Verificar Conexión
+### 3. Verify Connection
 
 ```bash
 curl -X POST "https://xxx.ngrok-free.dev/tools/invoke" \
@@ -48,21 +48,21 @@ curl -X POST "https://xxx.ngrok-free.dev/tools/invoke" \
   -d '{"tool": "session_status", "args": {}}'
 ```
 
-## Mantenimiento
+## Maintenance
 
-### Revisar Sesiones Activas
+### Check Active Sessions
 
 ```bash
 openclaw sessions list
 ```
 
-### Limpiar Procesos Huérfanos
+### Clean Orphan Processes
 
 ```bash
-# Matar tunnels viejos
+# Kill old tunnels
 pkill -f "cloudflared tunnel"
 
-# Matar servidores de desarrollo viejos
+# Kill old dev servers
 pkill -f "bun run dev"
 ```
 
@@ -78,16 +78,16 @@ cat /tmp/tunnel-*.log
 
 ## Troubleshooting
 
-### "500 Error en /api/studio/session"
-- Verificar que ngrok está corriendo
-- Verificar OPENCLAW_GATEWAY_URL en Vercel
-- Verificar token no expirado
+### "500 Error on /api/studio/session"
+- Verify ngrok is running
+- Verify OPENCLAW_GATEWAY_URL in Vercel
+- Verify token not expired
 
-### "Tunnel no responde"
-- Puerto puede estar ocupado
-- Reiniciar cloudflared
-- Verificar curl al localhost:PORT
+### "Tunnel not responding"
+- Port might be occupied
+- Restart cloudflared
+- Verify curl to localhost:PORT
 
-### "Repo ya existe en GitHub"
-- El agente debe usar nombre único
-- Borrar repo viejo o usar otro nombre
+### "Repo already exists on GitHub"
+- Agent should use unique name
+- Delete old repo or use different name

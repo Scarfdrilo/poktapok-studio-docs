@@ -1,22 +1,29 @@
 # 🍉 Poktapok Studio - VibeCoding Bootcamp
 
-Documentación técnica de la implementación de Poktapok Studio, una plataforma de desarrollo asistido por IA para el VibeCoding Bootcamp de Frutero Club.
+Technical documentation for Poktapok Studio implementation, an AI-assisted development platform for Frutero Club's VibeCoding Bootcamp.
 
-## 📚 Documentos
+## 📚 Documents
 
-- [ARCHITECTURE.md](./ARCHITECTURE.md) - Diagrama de flujo y componentes
-- [AGENT_PROMPT.md](./AGENT_PROMPT.md) - El prompt del agente de desarrollo
-- [API_REFERENCE.md](./API_REFERENCE.md) - Referencia de la API
-- [DEPLOYMENT.md](./DEPLOYMENT.md) - Guía de deployment
+- [ARCHITECTURE.md](./ARCHITECTURE.md) - Flow diagram and components
+- [AGENT_PROMPT.md](./AGENT_PROMPT.md) - Development agent prompt
+- [API_REFERENCE.md](./API_REFERENCE.md) - API reference
+- [DEPLOYMENT.md](./DEPLOYMENT.md) - Deployment guide
 
-## 🎯 ¿Qué es esto?
+## 📊 Diagrams
 
-Poktapok Studio permite que estudiantes sin experiencia en programación creen proyectos web completos simplemente conversando con un agente de IA. El agente:
+- [diagrams/main-architecture.drawio](./diagrams/main-architecture.drawio) - System architecture
+- [diagrams/user-flow.drawio](./diagrams/user-flow.drawio) - Complete user flow
 
-1. Crea el proyecto con Next.js + Tailwind
-2. Lo sube a GitHub
-3. Levanta un preview en vivo
-4. Permite iterar con cambios en tiempo real
+> Open `.drawio` files at [app.diagrams.net](https://app.diagrams.net)
+
+## 🎯 What is this?
+
+Poktapok Studio enables students with no programming experience to create complete web projects by simply chatting with an AI agent. The agent:
+
+1. Creates the project with Next.js + Tailwind
+2. Uploads it to GitHub
+3. Spins up a live preview
+4. Allows real-time iteration with changes
 
 ## 🏗️ Stack
 
@@ -27,16 +34,16 @@ Poktapok Studio permite que estudiantes sin experiencia en programación creen p
 
 ## 🔗 Links
 
-- **Producción:** https://frutero.club/bootcamp/studio
+- **Production:** https://frutero.club/bootcamp/studio
 - **Convex:** https://brainy-porcupine-595.convex.cloud
 - **Gateway:** (internal ngrok tunnel)
 
-## 📊 Métricas del Hackathon (Feb 21-22, 2026)
+## 📊 Hackathon Metrics (Feb 21-22, 2026)
 
-- **Proyectos creados:** 10+
-- **Estudiantes activos:** 8+
-- **Repos generados:** 9
+- **Projects created:** 10+
+- **Active students:** 8+
+- **Repos generated:** 9
 
 ---
 
-Desarrollado por [@0xscarf](https://twitter.com/0xscarf) con 🐊 [Scarfdrilo](https://github.com/Scarfdrilo)
+Built by [@0xscarf](https://twitter.com/0xscarf) with 🐊 [Scarfdrilo](https://github.com/Scarfdrilo)
